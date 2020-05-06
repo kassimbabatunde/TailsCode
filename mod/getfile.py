@@ -17,7 +17,7 @@ def process_jsonfile():
         stores = json.load(loadstore)
         newlist = sorted(stores, key=lambda k: k['name'])
         long_lat = add_lat_long_to_store(newlist)
-    return long_lat
+        return long_lat
 
 
 def add_lat_long_to_store(sorted_store_list):
