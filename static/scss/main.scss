@@ -1,0 +1,71 @@
+@import 'colors';
+@import 'foot';
+
+* {
+    box-sizing: border-box;
+  }
+  
+body{
+    width: 100%;
+    background-color:$primary-color;
+}
+
+.overview_div{
+    width: 60%;
+    height:inherit;
+    display: block;
+    position: fixed;
+    overflow-y: scroll;
+
+    &__table{
+        align-content: center;
+        overflow: auto;
+    }
+    &__thead tr{
+      display: block;
+    }
+
+}
+.side_div{
+  width: 20%;
+  height: 85vh;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.middle{
+  widows: 100%;
+  height: 85vh;
+}

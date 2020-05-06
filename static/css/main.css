@@ -1,0 +1,79 @@
+.foot {
+  width: 100%;
+  border-top-style: solid;
+  text-align: center;
+  position: fixed;
+  left: 0em;
+  bottom: 0rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #fff;
+}
+
+.overview_div {
+  width: 60%;
+  height: inherit;
+  display: block;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+.overview_div__table {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  overflow: auto;
+}
+
+.overview_div__thead tr {
+  display: block;
+}
+
+.side_div {
+  width: 20%;
+  height: 85vh;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.middle {
+  widows: 100%;
+  height: 85vh;
+}
+/*# sourceMappingURL=main.css.map */

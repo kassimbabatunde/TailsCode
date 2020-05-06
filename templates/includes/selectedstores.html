@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block title %} Store List {% endblock %}
+{% block content %}
+    <div class="overview_div">
+        {%if stores %}
+        <table id="selected_store" class="table table-striped">
+            <tr>
+                <th>Store name</th>
+                <th>Post Code</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+            {% for store in stores %}
+            <tr>
+                <td>{{ store['name'] }}</td>
+                <td>{{ store['postcode'] }}</td>
+                <td>{{ store['lat'] }}</td>
+                <td>{{ store['long'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %} 
+    </div>  
+{% endblock%}

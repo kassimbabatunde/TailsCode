@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block title %} Search Store {% endblock %}
+{% block content %}
+    <div class="table-div">
+        <div class="title">
+            <h1>Search Store by name or postcode</h1>
+        </div>
+        {%if form %}
+            <form autocomplete="off" action="{{ url_for('get_stores') }}" method="GET" >
+                <div class="form-group">
+                    {{form.name_post(id='searchInput', type='text', placeholder='Search Store')}}
+                    <p id="val"></p>
+                  </div>
+                  <button type="submit" class="btn btn-secondary">Submit</button>     
+            </form>
+        {% endif %}
+        <script type="text/javascript" lang="javascript">
+            function searchStores(storeslist) {
+                $('#searchInput').autocomplete({
+                    source:storeslist
+                });
+            } 
+            searchStores({{stores|safe}});
+        </script>
+    </div>  
+{% endblock%}
